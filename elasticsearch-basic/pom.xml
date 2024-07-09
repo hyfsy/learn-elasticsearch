@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>learn-elasticsearch</artifactId>
+        <groupId>com.hyf.elasticsearch</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>elasticsearch-basic</artifactId>
+
+    <dependencies>
+
+        <!-- es高级客户端-java版本 -->
+        <dependency>
+            <groupId>co.elastic.clients</groupId>
+            <artifactId>elasticsearch-java</artifactId>
+            <version>8.1.2</version>
+        </dependency>
+
+        <!-- json实体映射 -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.12.3</version>
+        </dependency>
+
+        <!-- Needed only if you use the spring-boot Maven plugin -->
+        <dependency>
+            <groupId>jakarta.json</groupId>
+            <artifactId>jakarta.json-api</artifactId>
+            <version>2.0.1</version>
+        </dependency>
+
+        <!-- 低级客户端 -->
+        <dependency>
+            <groupId>org.elasticsearch.client</groupId>
+            <artifactId>elasticsearch-rest-client</artifactId>
+            <version>8.1.2</version>
+        </dependency>
+        <!-- 集群客户端节点抓取 -->
+        <dependency>
+            <groupId>org.elasticsearch.client</groupId>
+            <artifactId>elasticsearch-rest-client-sniffer</artifactId>
+            <version>8.1.2</version>
+        </dependency>
+
+        <!-- Elasticsearch-SQL -->
+        <dependency>
+            <groupId>org.nlpcn</groupId>
+            <artifactId>elasticsearch-sql</artifactId>
+            <version>7.8.0.1</version>
+        </dependency>
+        <!-- 对 Elasticsearch-SQL 做了一层封装 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.2.8</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-core</artifactId>
+            <version>8.10.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <!--<build>-->
+    <!--    <plugins>-->
+    <!--        <plugin>-->
+    <!--            <groupId>org.apache.maven.plugins</groupId>-->
+    <!--            <artifactId>maven-shade-plugin</artifactId>-->
+    <!--            <version>3.1.0</version>-->
+    <!--            <executions>-->
+    <!--                <execution>-->
+    <!--                    <phase>package</phase>-->
+    <!--                    <goals><goal>shade</goal></goals>-->
+    <!--                    <configuration>-->
+    <!--                        <relocations>-->
+    <!--                            <relocation>-->
+    <!--                                <pattern>org.apache.http</pattern>-->
+    <!--                                <shadedPattern>hidden.org.apache.http</shadedPattern>-->
+    <!--                            </relocation>-->
+    <!--                            <relocation>-->
+    <!--                                <pattern>org.apache.logging</pattern>-->
+    <!--                                <shadedPattern>hidden.org.apache.logging</shadedPattern>-->
+    <!--                            </relocation>-->
+    <!--                            <relocation>-->
+    <!--                                <pattern>org.apache.commons.codec</pattern>-->
+    <!--                                <shadedPattern>hidden.org.apache.commons.codec</shadedPattern>-->
+    <!--                            </relocation>-->
+    <!--                            <relocation>-->
+    <!--                                <pattern>org.apache.commons.logging</pattern>-->
+    <!--                                <shadedPattern>hidden.org.apache.commons.logging</shadedPattern>-->
+    <!--                            </relocation>-->
+    <!--                        </relocations>-->
+    <!--                    </configuration>-->
+    <!--                </execution>-->
+    <!--            </executions>-->
+    <!--        </plugin>-->
+    <!--    </plugins>-->
+    <!--</build>-->
+</project>
